@@ -74,4 +74,11 @@ body {
 }
 .answers button.incorrect {
     background-color: #fc0303;
+    background-image: url(img/No\ No\ No\ Nope\ GIF\ -\ No\ No\ No\ Nope\ Emoji\ -\ Discover\ &\ Share\ GIFs.gif);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: right;
 }
+
+
+

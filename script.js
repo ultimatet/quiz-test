@@ -21,9 +21,27 @@ const questions = [
         question: "Vì lý do gì mà tao lại làm cái này?",
         answer: [
             { text: "Vì t rảnh", correct: false },
-            { text: "Vì t muốn chọc m", correct: false },
+            { text: "Vì t muốn chọc m", correct: true },
             { text: "Vì t cần luyện skill", correct: true },
             { text: "Đêm t mơ các cụ bảo làm", correct: false },
+        ],
+    },
+    {
+        question: "Tao đã làm cái này trong bao lâu?",
+        answer: [
+            { text: "Trong 1 buổi sáng nay trong lúc m ngủ", correct: false },
+            { text: "3 ngày tại t ngu", correct: true },
+            { text: "1 tuần tại t ngu vcl", correct: false },
+            { text: "Làm từ tối qua sáng nay xong", correct: false },
+        ],
+    },
+    {
+        question: "Công sức bỏ ra làm cái này chừng đó mà m làm xong hết trong bao lâu?",
+        answer: [
+            { text: "Dưới 1p", correct: false },
+            { text: "5p", correct: false },
+            { text: "rất lâu", correct: false },
+            { text: "éo bt tại t k có code timer", correct: true },
         ],
     },
 ];
@@ -126,7 +144,11 @@ function resetState() {
 function showScore() {
     resetState();
     questionElement.innerHTML = `Chúc mừng bạn đã làm đúng ${score} trên ${questions.length} câu!`;
-    nextBtn.innerHTML = "Play Again";
+    if (score < 5) {
+        nextBtn.innerHTML = "Chơi lại tại m ngu đ đúng hết";
+    } else {
+        nextBtn.innerHTML = "Chơi lại tại m rảnh lz";
+    }
 }
 
 
