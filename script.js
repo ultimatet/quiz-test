@@ -1,32 +1,34 @@
 const questions = [
     {
-        question: "What's your name?",
+        question: "Tại sao m lại béo?",
         answer: [
-            { text: "Hieu", correct: true },
-            { text: "Cuong", correct: false },
-            { text: "fdsfdsf", correct: false },
-            { text: "fdsfsd", correct: false },
+            { text: "Tại uống trs full toppping và đường nhiều", correct: true },
+            { text: "Tại sinh ra đã thế ròi", correct: false },
+            { text: "Tại tao bảo m thế", correct: false },
+            { text: "M k hề béo", correct: false },
         ],
     },
     {
-        question: "What's your hobby?",
+        question: "Tên ở nhà mọi ng hay gọi t nhất là gì?",
         answer: [
-            { text: "Hieu", correct: true },
-            { text: "Cuong", correct: false },
-            { text: "fdsfdsf", correct: false },
-            { text: "fdsfsd", correct: false },
+            { text: "Hiếu", correct: true },
+            { text: "Mỡ", correct: false },
+            { text: "Bum", correct: false },
+            { text: "Mọi", correct: false },
         ],
     },
     {
-        question: "What's your favorite food?",
+        question: "Vì lý do gì mà tao lại làm cái này?",
         answer: [
-            { text: "Hieu", correct: true },
-            { text: "Cuong", correct: false },
-            { text: "fdsfdsf", correct: false },
-            { text: "fdsfsd", correct: false },
+            { text: "Vì t rảnh", correct: false },
+            { text: "Vì t muốn chọc m", correct: false },
+            { text: "Vì t cần luyện skill", correct: true },
+            { text: "Đêm t mơ các cụ bảo làm", correct: false },
         ],
     },
 ];
+
+//TODO: question with long answer, not just multiple choice
 
 const questionElement = document.getElementById("question");
 const nextBtn = document.getElementById("next-btn");
@@ -123,7 +125,7 @@ function resetState() {
 
 function showScore() {
     resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    questionElement.innerHTML = `Chúc mừng bạn đã làm đúng ${score} trên ${questions.length} câu!`;
     nextBtn.innerHTML = "Play Again";
 }
 
